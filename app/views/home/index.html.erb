@@ -1,0 +1,5 @@
+
+<h1>Books</h1>
+<p><%= link_to "EN", url_for(only_path: true, locale: "en") %> - <%= link_to "FR", url_for(only_path: true, locale: "fr") %> </p>
+<p> <%= t("home.index.welcome") %> </p>
+<%= link_to "All the books", books_path(@books) %>

@@ -1,0 +1,32 @@
+---
+fr:
+  books:
+    created: Livre créé
+    destroy: Livre supprimé
+    edit:
+      title: Modifier le livre
+    index:
+      book_author: Auteur
+      book_editor: Editeur
+      book_summary: Résumé
+      book_title: Titre
+      delete_book: Supprimer
+      edit_book: Modifier
+      show_book: Voir
+      title: New book
+    new:
+      title: Créer un nouveau livre
+    updated: Livre modifié
+  home:
+    index:
+      welcome: Pas grand chose pour le moment. On y travaille !
+  views:
+    pagination:
+      first: "&laquo; Première"
+      last: Dernière &raquo;
+      next: Suivante &rsaquo;
+      previous: "&lsaquo; Précédente"
+      truncate: "&hellip;"
+  helpers:
+    books:
+      written_by: écrit par %{editor_name}

@@ -1,0 +1,32 @@
+---
+en:
+  books:
+    created: Book created
+    destroy: Book destroyed
+    edit:
+      title: Edit the book
+    index:
+      book_author: Author
+      book_editor: Editor
+      book_summary: Summary
+      book_title: Title
+      delete_book: Delete
+      edit_book: Edit
+      show_book: Show
+      title: New book
+    new:
+      title: Create a new book
+    updated: Book updated
+  home:
+    index:
+      welcome: Not much for now, but hey ! Hello world!
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: Last &raquo;
+      next: Next &rsaquo;
+      previous: "&lsaquo; Prev"
+      truncate: "&hellip;"
+  helpers:
+    books:
+      written_by: written_by %{editor_name}

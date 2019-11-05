@@ -1,0 +1,24 @@
+<h1><%= t("books.index.title") %></h1>
+
+<table>
+  <tr>
+    <th><%= t("books.index.book_title") %></th>
+    <th><%= t("books.index.book_author") %></th>
+    <th><%= t("books.index.book_summary") %></th>
+  </tr>
+
+<% @books.order(:title).each do |book| %>
+  <tr>
+    <td><%= book.title %></td>
+    <td><%= book.author %></td>
+    <td><%= summary(book) %></td>
+    <td><%= link_to t("books.index.show_book"), book_path(book) %></td>
+    <td><%= link_to t("books.index.edit_book"), edit_book_path(book) %></td>
+    <td><%= link_to t("books.index.delete_book"), book_path(book), method: :delete, data: {confirm: "Are you sure ?"} %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= paginate @books %>
+
+<%= link_to t("books.index.title.new_book"), new_book_path %>
