@@ -37,14 +37,14 @@ class BooksController < ApplicationController
 
   def destroy
     @book.destroy
-    flash[:alert] = t("books.destroy")
-    redirect_to books_path
   end
 
 private
 
   def find_book
-    @book = Book.find(params[:id])
+    @book = Book.find_by_id(params[:identifier])
+    @book ||= Book.find_by_slug(params[:identifier])
+    raise ActionController::RoutingError.new("Not found") unless @book
   end
 
   def book_params

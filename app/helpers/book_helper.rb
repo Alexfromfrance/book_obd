@@ -1,4 +1,4 @@
-module BooksHelper
+module BookHelper
 
   def summary(book)
     summary = []

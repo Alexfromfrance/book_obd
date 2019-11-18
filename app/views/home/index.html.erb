@@ -1,5 +1,10 @@
-
-<h1>Books</h1>
-<p><%= link_to "EN", url_for(only_path: true, locale: "en") %> - <%= link_to "FR", url_for(only_path: true, locale: "fr") %> </p>
-<p> <%= t("home.index.welcome") %> </p>
+<div class="jumbotron">
+  <div class="container mt-5">
+    <h1 class="display-4">Books</h1>
+    <p class="lead"> <%= t("home.index.welcome")%></p>
+  </div>
+</div>
+<%= link_to image_tag('england.png', alt:"EN", class:"locale-flag"), url_for(only_path: true, locale: "en") %>
+<%= link_to image_tag('french.png', alt:"FR", class:"locale-flag"), url_for(only_path: true, locale: "fr") %>
 <%= link_to "All the books", books_path(@books) %>
+
